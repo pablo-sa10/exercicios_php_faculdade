@@ -3,9 +3,16 @@
 if(isset($_POST['enviar'])){
   $numeros = $_POST['number'];
 
-  foreach($numeros as $num){
-    echo $num . '<br>';
-  } ;  
+  $valor = $numeros[0];
+
+  for($i = 1; $i < count($numeros); $i++){
+    
+    if($numeros[$i] < $valor){
+      $valor = $numeros[$i];
+    }
+  }
+
+  echo 'o menor valor é: '. $valor . ' e o seu indice é: '.$valor[0];
 }
 
 
