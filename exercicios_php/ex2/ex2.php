@@ -9,7 +9,7 @@
     <form action="./resultado.php" method="post" style="margin-left: 40px;">
         <?php for($i = 1; $i < 8; $i++){ ?>
         <label for="">NUMERO <?= $i ?></label>
-        <input name="number" type="number">
+        <input name="number[]" type="number">
         <br><br>
         <?php } ?>
 

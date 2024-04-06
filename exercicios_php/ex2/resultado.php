@@ -3,10 +3,8 @@
 if(isset($_POST['enviar'])){
   $numeros = $_POST['number'];
 
-  var_dump($numeros);
-  exit;
   foreach($numeros as $num){
-    echo $num;
+    echo $num . '<br>';
   } ;  
 }
 
