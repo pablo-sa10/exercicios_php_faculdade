@@ -2,7 +2,9 @@
 
 if(isset($_GET['get'])){
     if($_GET['get'] == 1){
-        echo 'Por favor insira um valor<br><br>';
+        echo 'Por favor insira uma Data<br><br>';
+    }else if($_GET['get'] == 2){
+        echo 'Ano inválido<br><br>';
     }
 }
 
@@ -16,12 +18,10 @@ if(isset($_GET['get'])){
     <title>Document</title>
 </head>
 <body style="padding: 20px;">
-    <h1>Loja de Tintas</h1>
-    <h3>Seja bem vindo</h3><br>
-
+    <h1>Calculadora Idade</h1>
     <form action="./resultado.php" method="post">
-        <label for="">Informe o tamanho da área a ser pintada em M²</label><br>
-        <input name="number" type="number" placeholder="Ex: 3.2">
+        <label for="">Informe sua data de nascimento</label><br>
+        <input name="date" type="date"><br>
         <button>Enviar</button>
     </form>
 </body>
