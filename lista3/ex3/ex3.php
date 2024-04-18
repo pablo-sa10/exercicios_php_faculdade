@@ -12,6 +12,8 @@
             <label for="">Número</label>
             <input name="number[]" type="number" step="any" required><br><br>
         <?php } ?>
+        <label>Digte um numero a ser multiplicado</label><br>
+        <input name="mult" type="number" step="any" required><br><br>
         <button>Enviar</button>
     </form>
 </body>

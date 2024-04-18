@@ -9,5 +9,15 @@ $somaAlunos = count($nome);
 $somaNotas = array_sum($notaInt);  
 $mediaSala = $somaNotas / $somaAlunos;
 
-echo 'a média da classe é: '. $mediaSala;
+$i = 0;
+$notaDoAluno = 0;
+foreach($nome as $n){
+    if($notaDoAluno < $notaInt[$i]) {
+        $msg = "A nota do $n é a maior da sala"; 
+    } 
+    $i += 1;
+}
+
+echo 'a média da classe é: '. $mediaSala. '<br>';
+echo $msg;
 ?>
