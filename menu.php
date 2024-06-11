@@ -19,7 +19,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary p-4">
   <div class="container">
-    <a class="navbar-brand" href="#">Exercícios</a>
+    <a class="navbar-brand" href="<?php $current_page == "index.php" ? $link = "" : $link = "../../"?> <?= $link ?>">Exercícios</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
