@@ -31,13 +31,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
           </a>
           <ul class="dropdown-menu">
             <?php for($i = 1; $i < 11; $i++){ 
-               $link = "../../lista2/ex<?= $i ?>/ex<?= $i ?>.php";
 
-                if($current_page != "index.php"){
-                    $link = "./lista2/ex<?= $i ?>/ex<?= $i ?>.php";
-                }
-                   
-                
+               $link = $current_page == "index.php" ? "./lista2/ex{$i}/ex{$i}.php" : "../../lista2/ex{$i}/ex{$i}.php";
+                    
             ?>
             <li><a class="dropdown-item" href="<?= $link ?>">Exercício <?= $i ?></a></li>
             <?php } ?>
@@ -49,11 +45,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
           </a>
           <ul class="dropdown-menu">
             <?php for($i = 1; $i < 6; $i++){
-                    $link = "../../lista3/ex<?= $i ?>/ex<?= $i ?>.php";
-
-                    if($current_page == "index.php"){
-                        $link = "./lista3/ex<?= $i ?>/ex<?= $i ?>.php";
-                    }
+                    
+                    $link = $current_page == "index.php" ? "./lista3/ex{$i}/ex{$i}.php" : "../../lista3/ex{$i}/ex{$i}.php";
                 
                 ?>
             <li><a class="dropdown-item" href="<?= $link ?>">Exercício <?= $i ?></a></li>
